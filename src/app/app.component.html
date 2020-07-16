@@ -1,10 +1,33 @@
 <!-- Start of App Universal Heading component -->
-<app-universal-heading [headingType]="'h1'">This is Universal heading</app-universal-heading>
-<app-universal-heading [headingType]="'h2'">This is Universal heading</app-universal-heading>
-<app-universal-heading [headingType]="'h3'">This is Universal heading</app-universal-heading>
-<app-universal-heading [headingType]="'h4'">This is Universal heading</app-universal-heading>
-<app-universal-heading [headingType]="'h5'">This is Universal heading</app-universal-heading>
-<app-universal-heading [headingType]="'h6'">This is Universal heading</app-universal-heading>
+<section class="container pt-4">
+    <form>
+        <label for="selectorName">Selector (h1-h6) (Defaults to h1):</label>
+        <div class="input-group mb-3">
+            <input type="text"
+            name="selectorName"
+            class="form-control"
+            placeholder="h1"
+            aria-label="Selector Name"
+            aria-describedby=""
+            [(ngModel)]="headingSelector"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+        <label for="selectorName">Heading Title:</label>
+        <div class="input-group mb-3">
+            <input type="text"
+            name="headingTitle"
+            class="form-control"
+            placeholder="This is heading"
+            aria-label="heading"
+            aria-describedby=""
+            [(ngModel)]="headingTitle"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+    </form>
+    <hr>
+    <app-universal-heading [headingType]="headingSelector">{{ headingTitle }}</app-universal-heading>
+</section>
+
 <!-- End of App Universal Heading component -->
 
 <router-outlet></router-outlet>
