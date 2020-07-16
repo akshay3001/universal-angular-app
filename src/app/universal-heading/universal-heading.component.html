@@ -1,0 +1,32 @@
+<!-- HTML with heading that is content projected -->
+<!-- Using ngSwitch Directive of angular -->
+<section [ngSwitch]="headingType">
+    <header>
+        <h1 *ngSwitchCase="'h1'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h1>
+        <h2 *ngSwitchCase="'h2'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h2>
+        <h3 *ngSwitchCase="'h3'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h3>
+        <h4 *ngSwitchCase="'h4'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h4>
+        <h5 *ngSwitchCase="'h5'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h5>
+        <h6 *ngSwitchCase="'h6'">
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h6>
+        <h1 *ngSwitchDefault>
+            <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
+        </h1>
+    </header>
+</section>
+
+<!-- ng Template that includes the content projection from parent -->
+<ng-template #headingTemplate>
+    <ng-content></ng-content>
+</ng-template>
