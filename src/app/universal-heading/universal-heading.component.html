@@ -1,6 +1,6 @@
 <!-- HTML with heading that is content projected -->
 <!-- Using ngSwitch Directive of angular -->
-<section [ngSwitch]="headingType">
+<section [ngSwitch]="headingType.toLowerCase()">
     <header>
         <h1 *ngSwitchCase="'h1'">
             <ng-container *ngTemplateOutlet="headingTemplate"></ng-container>
