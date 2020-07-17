@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Live Demo
 
-https://akshay3001.github.io/universal-angular-app/
+[link](https://akshay3001.github.io/universal-angular-app/){:target="_blank"}
 
 ![Universal Heading Widget](./universal-heading-widget.png)
 
